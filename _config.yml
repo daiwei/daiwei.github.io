@@ -1,40 +1,24 @@
-# # # # # # # #
-#   K i k o   #
-# # # # # # # #
+# My variables
+name: Dai Wei
+description: blog
+google_analytics: UA-39119359-12
+google_verification: null
 
-# Basic
-name:               "daiwei"
 
-# URL
-baseurl:            ""
-#baseurl:            "" #For Root Domain
-permalink:          /:year/:month/:day/:title.html
+# File management
+include: [".htaccess"]
+exclude: ["README.md"]
 
-# Markdown
-markdown:           rdiscount
-
-# Navigation
-nav:
-  - name:           "ThinkPower"
-    href:           "//gps.scjtracker.com"
-  - name:           "Zhihu"
-    href:           "//www.zhihu.com/people/daiweinj"
 
 # Sass
 sass:
-  style:            :compressed
+  style: :compressed
+  sass_dir: _sass
 
-# Scopes
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge

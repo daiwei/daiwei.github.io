@@ -1,15 +1,12 @@
 ---
 layout: default
 ---
-<header class="masthead">
-  <h1 class="masthead-title--small">
-    <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-  </h1>
-</header>      
-<div class="content post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
-  </div>
-  {{ content }}
+
+<div class="post">
+    <a class="post__back" href="/">&lt;-- back</a>
+    <h1 class="post__title">{{ page.title }}</h1>
+    <p class="post__date">{{ page.date | date: '%B %-d, %Y' }}</p>
+    <div class="post__content"?>
+        {{ content }}
+    </div>
 </div>

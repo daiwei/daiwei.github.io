@@ -1,14 +1,21 @@
 ---
+layout: post
 title: 分离C语言中的可变宏参数__VA_ARGS__
 ---
 
+<p class="lead">C语言中宏的黑魔法</p>
+
+最近项目中遇到需要针对可变宏参数`__VA_ARGS__`中的每个参数进行**宏处理**的情况. Google了下没有找到, 便自己琢磨实现了一个.
+
+这里用到了获取`__VA_ARGS__`个数的辅助宏`ARGS_SIZE`.
+
     #include <stdio.h>
 
-    /*
+    /**
      * max args size: 9
      */
     #define GET_A10(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, ...)     a10
-    #define ARGS_SIZE(...)          SELECT_10TH(__VA_ARGS__, 9, 8, 7, 6, 5, 4, 3, 2, 1, throwaway)
+    #define ARGS_SIZE(...)          GET_A10(__VA_ARGS__, 9, 8, 7, 6, 5, 4, 3, 2, 1, throwaway)
 
     #define FOREACH(...)            SEPARATE(ARGS_SIZE(__VA_ARGS__), __VA_ARGS__)
     #define SEPARATE_(n)            SEPARATE_##n
@@ -26,7 +33,7 @@ title: 分离C语言中的可变宏参数__VA_ARGS__
 
     #define DO(arg)                 printf("LOG: " arg "\n")
 
-    int main(int argc, char *argv[])
+    int main()
     {
         FOREACH("s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8");
         return 0;
