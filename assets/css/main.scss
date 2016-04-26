@@ -225,7 +225,8 @@ code {
     padding: .25em .5em;
     font-size: 85%;
     color: #da4939;
-    background-color: rgba(#da4939, .1);
+    // background-color: rgba(#da4939, .1);
+    background-color: #FFFAFA;
 }
 
 pre {
@@ -249,7 +250,8 @@ pre {
         padding: 0;
         font-size: 100%;
         color: inherit;
-        background-color: transparent;
+        // background-color: transparent;
+        background-color: #FFFAFA;
     }
 
     @include MQ(M) {
