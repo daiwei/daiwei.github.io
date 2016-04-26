@@ -190,6 +190,15 @@ ul {
 
 ///////////////////////////////////////////////////////////
 // add by daiwei
+
+blockquote {
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+    border-left-style: solid;
+    border-left-color: gray;
+    border-left-width: 0.5rem;
+}
+
 $S:     320px;
 $M:     768px;
 $L:     1170px;

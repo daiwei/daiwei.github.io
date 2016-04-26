@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【推荐】The Function Pointer Tutorials
+title: 【文章】The Function Pointer Tutorials
 ---
 
 在网上看到一个[介绍函数指针的网站](http://www.newty.de/)，对函数指针介绍的很详细，值得好好读读。
