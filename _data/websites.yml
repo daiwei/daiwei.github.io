@@ -1,8 +1,8 @@
-- name: Gif-Giving
-  url: http://gif-giving.com
+- name: ThinkPower
+  url: http://gps.scjtracker.com
 
-- name: Sheri Koetting
-  url: http://sherikoetting.com
-
-- name: GetPeppers
-  url: http://getpeppers.com
+# - name: Sheri Koetting
+#   url: http://sherikoetting.com
+#
+# - name: GetPeppers
+#   url: http://getpeppers.com

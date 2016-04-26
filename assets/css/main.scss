@@ -7,7 +7,8 @@
 body {
     color: $color-primary;
     background: $color-background;
-    font-family: 'Inconsolata', ;
+    // font-family: 'Inconsolata', ;
+    font-family: $font-family;
     font-size: 100%;
     font-weight: 400;
 }
@@ -185,4 +186,109 @@ ul {
             margin-bottom: 10px;
         }
     }
+}
+
+///////////////////////////////////////////////////////////
+// add by daiwei
+$S:     320px;
+$M:     768px;
+$L:     1170px;
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+    @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+    @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+    @media only screen and (min-width: $L) { @content; }
+  }
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+code, pre {
+    // font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: $code-font-family;
+}
+
+code {
+    padding: .25em .5em;
+    font-size: 85%;
+    color: #da4939;
+    background-color: rgba(#da4939, .1);
+}
+
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    @include font-size(12px);
+    line-height: 1.4;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    // background-color: #FFF;
+    background-color: #FFFAFA;
+    border: 1px #e6e1dc;
+    border-style: dashed none dashed none;
+    // box-shadow: 0 0 2px 1px #888888;
+
+    code {
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+        background-color: transparent;
+    }
+
+    @include MQ(M) {
+        @include font-size(14px);
+    }
+}
+
+.highlight {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    pre {
+        margin-bottom: 0;
+    }
+}
+
+.tp-h-divider {
+    display: table;
+    white-space: nowrap;
+    height: auto;
+    margin: 3rem 0 3rem 0;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+}
+
+.tp-h-divider:after, .tp-h-divider:before {
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC);
+}
+
+.tp-h-divider:before {
+    background-position: right 1em top 50%;
+}
+
+.tp-h-divider:after {
+    background-position: left 1em top 50%;
 }

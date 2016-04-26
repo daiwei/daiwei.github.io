@@ -1,7 +1,7 @@
-- name: Fatso
-  category: theme
-  url: https://github.com/getmicah/fatso
+- name: ThinkPower
+  category: website
+  url: http://gps.scjtracker.com
 
-- name: Beam
-  category: theme
-  url: https://github.com/getmicah/beam
+# - name: Beam
+#   category: theme
+#   url: https://github.com/getmicah/beam
