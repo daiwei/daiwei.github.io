@@ -15,8 +15,8 @@ title: 分离C语言中的可变宏参数__VA_ARGS__
 /**
  * max args size: 9
  */
-#define GET_A10(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, ...)     a10
-#define ARGS_SIZE(...)          GET_A10(__VA_ARGS__, 9, 8, 7, 6, 5, 4, 3, 2, 1, throwaway)
+#define GET_10TH(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, ...)  a10
+#define ARGS_SIZE(...)          GET_10TH(__VA_ARGS__, 9, 8, 7, 6, 5, 4, 3, 2, 1, throwaway)
 
 #define FOREACH(...)            SEPARATE(ARGS_SIZE(__VA_ARGS__), __VA_ARGS__)
 #define SEPARATE_(n)            SEPARATE_##n
