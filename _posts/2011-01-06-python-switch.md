@@ -3,6 +3,8 @@ layout: post
 title: Python中switch的实现
 ---
 
+**TL;DR** Python学习
+
 众所周知Python中是没有`switch`的，一般而言是用`if-else`来代替的，如C语言下的
 
 ```

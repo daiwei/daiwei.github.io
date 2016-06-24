@@ -1,7 +1,9 @@
 ---
 layout: post
-title: 让android支持RTSP及live555分析
+title: 让Android支持RTSP及live555分析
 ---
+
+**TL;DR** 移植live555到Android
 
 # 如何让Android支持C++异常机制
 
