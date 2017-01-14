@@ -21,11 +21,8 @@ title: embedded-gateway-system开源
 # 分层
 
 - app
-
 - framework
-
 - service
-
 - hardware
 
 
@@ -37,9 +34,6 @@ title: embedded-gateway-system开源
 # 通信分类
 
 - method           // module -> module
-
 - command          // loader -> module
-
 - notify           // broadcast
-
 - push             // backend -> system/user/module
