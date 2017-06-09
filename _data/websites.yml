@@ -1,4 +1,4 @@
-- name: ThinkPower
+- name: GPS Track
   url: http://gps.scjtracker.com
 
 - name: Olive Home
@@ -6,9 +6,3 @@
 
 - name: Argo
   url: http://121.42.47.232
-
-# - name: Sheri Koetting
-#   url: http://sherikoetting.com
-#
-# - name: GetPeppers
-#   url: http://getpeppers.com
