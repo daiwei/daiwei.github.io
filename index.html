@@ -9,7 +9,7 @@ layout: default
     <ul>
         {% for websites in site.data.websites %}
         <li>
-            <span width="30%">{{ websites.name }}</span> <a href="{{ websites.url }}">{{ websites.url }}</a>
+            <div style="display: inline-block; width: 20%;">{{ websites.name }}</div> <a href="{{ websites.url }}">{{ websites.url }}</a>
         </li>
         {% endfor %}
     </ul>
