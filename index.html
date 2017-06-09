@@ -9,7 +9,7 @@ layout: default
     <ul>
         {% for websites in site.data.websites %}
         <li>
-            <a href="{{ websites.url }}">{{ websites.url }}</a>
+            <span width="30%">{{ websites.name }}</span> <a href="{{ websites.url }}">{{ websites.url }}</a>
         </li>
         {% endfor %}
     </ul>
