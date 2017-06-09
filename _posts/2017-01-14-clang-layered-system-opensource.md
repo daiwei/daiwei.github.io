@@ -1,6 +1,6 @@
 ---
 layout: post
-title: embedded-gateway-system开源
+title: clang-layered-system开源
 ---
 
 **TL;DR**   这份代码主要是运用C语言进行模块化开发的一个试验框架
@@ -8,7 +8,7 @@ title: embedded-gateway-system开源
 
 # 概述
 
-现将之前所做的[embedded-gateway-system](https://github.com/daiwei/embedded-gateway-system)开源，这里只是个框架demo。
+现将之前所做的[clang-layered-system](https://github.com/daiwei/clang-layered-system)开源，这里只是个框架demo。
 
 
 # 模块化
