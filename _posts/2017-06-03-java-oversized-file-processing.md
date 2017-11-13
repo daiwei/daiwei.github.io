@@ -32,9 +32,9 @@ mappedBuf.get();
 这里我利用 map 将文件映射到内存，并对其分块，并利用多线程并发处理这些映射的文件分块，由于各个线程处理的数据是独立的，所以这就是多线程处理模式中的 Immutable 模式。
 ```java
 public void parallelReadFile(final String path) throws IOException {
-    /******************************************************************************************
+    /********************************************************************
      * calculate partitions size to map file
-     ******************************************************************************************/
+     ********************************************************************/
     long K_BYTE = 1024L;            // 1KB
     long M_BYTE = 1024 * 1024L;     // 1MB
     long defaultPartitionSize = 50 * M_BYTE;
@@ -61,9 +61,9 @@ public void parallelReadFile(final String path) throws IOException {
     fc_fra.close();
     fra.close();
 
-    /******************************************************************************************
+    /********************************************************************
      * map file & parse in threads
-     ******************************************************************************************/
+     ********************************************************************/
     ExecutorService threadPool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     FileInputStream fis = new FileInputStream(path);
@@ -96,9 +96,9 @@ public void parallelReadFile(final String path) throws IOException {
         });
     }
 
-    /******************************************************************************************
+    /********************************************************************
      * wait until thread pool terminaled
-     ******************************************************************************************/
+     ********************************************************************/
     threadPool.shutdown();
     try {
         while (!threadPool.isTerminated()) {
