@@ -2,4 +2,7 @@
 layout: about
 ---
 
-Hello, my name is Dai Wei.
+Dai Wei
+
+Graduate from NJUST
+Living in Nanjing
