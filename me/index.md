@@ -4,6 +4,6 @@ layout: about
 
 Dai Wei
 
-Graduate from NJUST
+Graduated from NJUST
 
 Living in Nanjing
